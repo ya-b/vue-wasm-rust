@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "wasm:build": "wasm-pack build wasm\\rust-wasm",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "serve:wasm": "wasm-pack build wasm\\rust-wasm && vue-cli-service serve",
+    "build:wasm": "wasm-pack build wasm\\rust-wasm && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "rust-wasm": "file:wasm/rust-wasm/pkg",
     "vue": "^3.2.13"
   },
   "devDependencies": {
